@@ -1,17 +1,15 @@
 # Pantry Pilot
 
-A simple cross-platform pantry management application built with React Native and Expo.
+A cross-platform pantry management application built with React Native and Expo that helps users organize pantry items, scan barcodes, track expiry dates, and reduce food waste.
 
 ## Features
 
-- Add pantry items manually
-- Barcode scanning
-- Automatic product lookup
+- Manual pantry item management
+- Barcode scanning using Expo Camera
+- Product lookup with Open Food Facts API
 - Expiry date tracking
-- Food categorization
-- Pantry inventory
-- Local storage
-- Android, iOS, and Web support
+- Pantry inventory management
+- Cross-platform support (Android, iOS, Web)
 
 ## Tech Stack
 
@@ -21,47 +19,24 @@ A simple cross-platform pantry management application built with React Native an
 - React Navigation
 - Expo Camera
 - Open Food Facts API
+- React Context API
 - AsyncStorage
 
-## Installation
+## Getting Started
 
-Clone the repository.
-
-```bash
-git clone <repository-url>
-```
-
-Move into the project.
-
-```bash
-cd PantryPilot
-```
-
-Install dependencies.
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-## Run the project
-
-### Android
+### Run on Android / iOS
 
 ```bash
 npx expo start
 ```
 
-Press **a** to open Android.
-
-### iOS
-
-```bash
-npx expo start
-```
-
-Press **i** to open iOS Simulator.
-
-### Web
+### Run on Web
 
 ```bash
 npx expo start --web
@@ -70,30 +45,67 @@ npx expo start --web
 ## Project Structure
 
 ```
-app/
+assets/
 components/
 context/
-hooks/
+data/
+screens/
+types/
 utils/
-assets/
+App.tsx
+package.json
 ```
 
-## Barcode Scanner
+# How Codex & GPT-5.6 Were Used
 
-The application uses **Expo Camera** for barcode scanning and retrieves product information from the **Open Food Facts API**.
+OpenAI Codex and GPT-5.6 were used as development assistants throughout the project.
 
-If a product is unavailable, users can manually add the item.
+### Codex
+
+Codex accelerated implementation by helping with:
+
+- Generating React Native components
+- Building the barcode scanning workflow
+- Creating reusable UI components
+- Refactoring TypeScript code
+- Debugging Expo and React Native issues
+- Improving project structure
+- Writing documentation and README files
+
+### GPT-5.6
+
+GPT-5.6 supported the development process by:
+
+- Explaining React Native and Expo concepts
+- Troubleshooting TypeScript and dependency issues
+- Helping integrate the Open Food Facts API
+- Improving application architecture
+- Generating project documentation
+- Assisting with Git and GitHub workflows
+- Reviewing and improving code quality
+
+The AI tools were used as development assistants while all project decisions, integration, testing, customization, and validation were completed by the project developer.
+
+## Challenges
+
+- Reliable barcode scanning across platforms
+- Camera permission handling
+- Managing application state
+- API integration and error handling
+- Creating a clean, beginner-friendly user experience
 
 ## Future Improvements
 
-- AI recipe recommendations
-- Smart shopping lists
+Future versions may include:
+
+- AI-powered recipe recommendations
+- Smart shopping list generation
+- Nutrition insights
 - Receipt scanning
-- Nutrition analysis
-- Cloud backup
-- Family sharing
-- Push notifications
+- Cloud synchronization
+- Family pantry sharing
+- Push notifications for expiring food
 
 ## License
 
-MIT
+MIT License
