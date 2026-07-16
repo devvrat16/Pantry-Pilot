@@ -35,3 +35,4 @@ npx expo start --clear
 - `utils/recipeMatching.ts` matching and priority-scoring logic
 
 No account, backend, notifications, nutrition tracking, or cloud sync is included by design.
+# Pantry-Pilot
