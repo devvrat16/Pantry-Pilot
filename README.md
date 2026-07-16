@@ -1,38 +1,99 @@
 # Pantry Pilot
 
-An Expo MVP for tracking pantry food, rescuing ingredients near expiry, and turning what is already on hand into practical meal ideas.
+A simple cross-platform pantry management application built with React Native and Expo.
 
-## Run it
+## Features
+
+- Add pantry items manually
+- Barcode scanning
+- Automatic product lookup
+- Expiry date tracking
+- Food categorization
+- Pantry inventory
+- Local storage
+- Android, iOS, and Web support
+
+## Tech Stack
+
+- React Native
+- Expo
+- TypeScript
+- React Navigation
+- Expo Camera
+- Open Food Facts API
+- AsyncStorage
+
+## Installation
+
+Clone the repository.
+
+```bash
+git clone <repository-url>
+```
+
+Move into the project.
+
+```bash
+cd PantryPilot
+```
+
+Install dependencies.
 
 ```bash
 npm install
+```
+
+## Run the project
+
+### Android
+
+```bash
 npx expo start
 ```
 
-This project uses Expo SDK 54, which is compatible with the current App Store and Play Store Expo Go app. Use Expo Go to open the QR code on a physical device, or press `i` / `a` for a local iOS or Android simulator. Camera barcode scanning requires a physical device with camera permission enabled.
+Press **a** to open Android.
 
-If you opened an earlier SDK 57 version of this project, stop Metro first and restart with a cleared cache:
+### iOS
 
 ```bash
-npx expo start --clear
+npx expo start
 ```
 
-## What is included
+Press **i** to open iOS Simulator.
 
-- Seeded pantry on first launch, saved locally with AsyncStorage thereafter
-- Manual add form with name, quantity, category, and expiry date
-- Barcode scanning with Open Food Facts product lookup and editable autofill
-- Expiry-sorted pantry with prominent 3-day "use soon" flags
-- Ten local recipes, ranked to prioritize ingredients closest to expiry
-- Recipe ingredient availability and one-tap missing-item shopping list
+### Web
 
-## Structure
+```bash
+npx expo start --web
+```
 
-- `components/` reusable presentation components
-- `context/` local persisted pantry and shopping-list state
-- `data/` seed pantry items and local recipes
-- `screens/` navigation screens
-- `utils/recipeMatching.ts` matching and priority-scoring logic
+## Project Structure
 
-No account, backend, notifications, nutrition tracking, or cloud sync is included by design.
-# Pantry-Pilot
+```
+app/
+components/
+context/
+hooks/
+utils/
+assets/
+```
+
+## Barcode Scanner
+
+The application uses **Expo Camera** for barcode scanning and retrieves product information from the **Open Food Facts API**.
+
+If a product is unavailable, users can manually add the item.
+
+## Future Improvements
+
+- AI recipe recommendations
+- Smart shopping lists
+- Receipt scanning
+- Nutrition analysis
+- Cloud backup
+- Family sharing
+- Push notifications
+
+## License
+
+MIT
